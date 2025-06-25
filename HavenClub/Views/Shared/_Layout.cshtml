@@ -296,10 +296,8 @@ fbq('track', 'PageView');
  
 <!-- Desktop Banner -->
 
+@RenderBody();
 
-    <main>
-        @RenderBody();
-    </main>
 
 <div class="footerShape">
 	<img src="images/footerTop.png">
@@ -419,7 +417,7 @@ Escape to luxury with Haven Club and Resorts, where every moment is tailored for
                 return false;
             }
             
-            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var emailPattern = /^[^\s]+[^\s]+\.[^\s]+$/;
             if(!emailPattern.test(email)){
                 $('.bm_msg').html('<div style="color: red">Please enter a valid email address.</div>'); 
                 return false;

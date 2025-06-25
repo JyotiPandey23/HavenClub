@@ -671,7 +671,7 @@ height: 170px;
     transform: translate(-55px,-50%);
 }
 .mainBannerCarousel .owl-nav button.owl-prev{
-    position: absolute;x
+    position: absolute;
     left: 10px;
     top: 50%;
     z-index: 9;
