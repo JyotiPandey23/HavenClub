@@ -1,0 +1,168 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing Plans</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            color: #000;
+            background-color: #f5f5f5;
+        }
+
+        .plans-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 30px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .plan {
+            background-color: #fff;
+            border-radius: 15px;
+            width: 300px;
+            position: relative;
+            padding: 25px 25px 100px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .premium {
+            height: 500px;
+            z-index: 2;
+            transform: scale(1.05);
+        }
+
+        .plan-title {
+            text-align: center;
+            color: #001e6c;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .plan-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+            .plan-features li {
+                margin-bottom: 12px;
+                font-size: 15px;
+                position: relative;
+                padding-left: 25px;
+                color: #333;
+            }
+
+                .plan-features li::before {
+                    content: "✔";
+                    color: #001e6c;
+                    font-weight: bold;
+                    position: absolute;
+                    left: 0;
+                }
+
+        .price-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #7200b8;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 0 0 15px 15px;
+        }
+
+        .badge {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background: #7e00ff;
+            color: #fff;
+            padding: 6px 12px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="plans-container" style="padding-top:50px;">
+
+        <!-- Basic Plan -->
+        <div class="plan basic" style="min-height: 400px;">
+            <div class="plan-title">BASIC PLAN (3 Years)</div>
+            <ul class="plan-features">
+                <li>Price ₹74,999</li>
+                <li>Only India</li>
+                <li>6N/7D Yearly</li>
+                <li>Only Accommodations</li>
+                <li>Only 4 Star Properties</li>
+                <li>Travel Insurance Included</li>
+                <li>Dedicated Customer Support</li>
+                <li>Access to Festival Deals</li>
+                <li>One Free Airport Transfer / Year</li>
+                <li>Exclusive Loyalty Points</li>
+            </ul>
+            <div class="price-bar">₹ 74,999 /-</div>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="plan premium">
+            <div class="badge">BEST VALUE</div>
+            <div class="plan-title">PREMIUM PLAN (5 Years)</div>
+            <ul class="plan-features">
+                <li>Price ₹1,75,000</li>
+                <li>India + Asia</li>
+                <li>6N/7D Yearly</li>
+                <li>Only Accommodations</li>
+                <li>Only 4 & 5 Star Properties</li>
+                <li>Travel Concierge Services</li>
+                <li>2 Free Airport Transfers / Year</li>
+                <li>Festival & Holiday Priority Bookings</li>
+                @* <li>Free Spa Coupons (Selected Hotels)</li> *@
+                @* <li>Dedicated Relationship Manager</li> *@
+               @*  <li>Complimentary Spa Treatment Once a Year</li> *@
+                <li>VIP Lounge Access at Select Airports</li>
+                <li>Early Check-in & Late Check-out Privileges</li>
+                <li>Free Room Decor for Special Occasions (Birthday/Anniversary)</li>
+                <li>Priority Reservation at Partner Resorts</li>
+            </ul>
+
+            <div class="price-bar">₹ 1,75,000 /-</div>
+        </div>
+
+        <!-- Standard Plan -->
+        <div class="plan standard" style="min-height:400px;">
+            <div class="plan-title">STANDARD PLAN (10 Years)</div>
+            <ul class="plan-features">
+                <li>Price ₹3,75,000</li>
+                <li>India + Asia + Europe</li>
+                <li>6N/7D Yearly</li>
+                <li>Only Accommodations</li>
+                <li>Only 5 Star Properties</li>
+                <li>Global Assistance 24/7</li>
+                <li>Complimentary Room Upgrade</li>
+                <li>Free Meals in Select Hotels</li>
+                <li>3 Free Airport Transfers / Year</li>
+                <li>Annual Luxury Gift Box</li>
+            </ul>
+            <div class="price-bar">₹ 3,75,000 /-</div>
+        </div>
+
+    </div>
+</body>
+</html>

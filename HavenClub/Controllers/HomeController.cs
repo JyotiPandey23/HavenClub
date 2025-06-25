@@ -18,6 +18,10 @@ namespace HavenClub.Controllers
             return View();
         }
 
+        public IActionResult Membership()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
