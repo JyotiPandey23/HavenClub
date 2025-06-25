@@ -1,0 +1,1037 @@
+/* header .header_inner{
+	gap: 20px;
+}
+header .header_inner nav>ul{
+	    flex-wrap: wrap;
+	justify-content: center;
+}
+.appLogo a{
+	line-height: 0;
+}
+header .header_inner .header_call{
+	flex-wrap: wrap;
+}
+header .header_inner .header_right{
+	min-width: 280px;
+    box-sizing: border-box;
+}
+header{
+	overflow: hidden;
+}
+.travelPartners .owl-item img{
+	object-fit: contain;
+	background: #fff;
+}
+#testim-content{
+	max-width: 980px;
+	width: 100%;
+}
+.destination .item a>img{
+	height: auto;
+    aspect-ratio: 121 / 140;
+    max-height: 420px;
+}
+.travelPartners .owl-item img, 
+.preferredPartners .owl-item img{
+	    aspect-ratio: 27 / 16;
+	    max-height: 130px;
+	    height: auto;
+}
+.mainBanner .banner_wrapper .banner_content{
+	box-sizing: border-box;
+} */
+
+
+
+
+
+
+
+@media screen and (max-width:1280px){
+	.container{
+		padding: 0 3rem;
+	}
+	.destination_sec .owl-nav button.owl-prev{
+		left: 15px;
+	}
+	.destination_sec .owl-nav button.owl-next{
+		right: 15px;
+	}
+	.destination_sec .owl-nav button {
+	    width: 45px;
+	    height: 45px;
+	}
+	.owl-nav button img,
+	{
+		width: 16px;
+	}
+	header .header_inner nav>ul{
+		gap: 20px;
+	}
+	li.fullCol ul{
+		grid-template-columns: repeat(7, 1fr);
+	}
+	.loginHead{
+		margin-top: 5px;
+	}
+	.appLogo{
+		flex-wrap: wrap;
+	}
+	.appLogo a img{
+		max-width: 120px;
+	}
+	.footerInner{
+		gap: 30px;
+	}
+	.aboutInner,
+	.aboutBenifit,
+	.foreverInner,
+	.contactInner,
+	.destiDetailContentInner{
+		gap: 50px;
+	}
+	.mediaPartnersInner{
+		  grid-template-columns: repeat(4, 1fr);
+	}
+	.aboutHome .secTitle h2:after{
+		left: 50%; 
+		transform: translateX(-50%);
+	}
+	.aboutPageInner,
+	.luxurius,
+	.personaliseInner,
+	.luxurius,
+	.membershipBenifit{
+		gap: 50px;
+	}
+	.luxuryRoom .luxuryRoomInner,
+	.seasonApartmentInner{
+		gap: 30px;
+	}
+	.listingItem{
+	      grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width:1160px){
+  header .header_inner .header_right{
+  	gap: 25px;
+  }
+  header .header_inner .header_call:after{
+  	right: -7px;
+  }
+}
+@media screen and (max-width:1080px){
+  .container {
+	  padding: 0 30px;
+  }
+  .mainBanner .banner_wrapper .banner_content h1{
+  	font-size: 55px;
+  }
+  .destination_sec .owl-nav button, 
+  .mainBannerCarousel .owl-nav button,
+  .aboutCarousel .owl-nav button.owl-prev,
+  .aboutCarousel .owl-nav button.owl-next,
+  .destinationDetail .owl-nav button.owl-prev,
+  .destinationDetail .owl-nav button.owl-next{
+	width: 40px;
+    height: 40px;
+  }
+  .aboutCarousel .owl-nav button.owl-prev{
+	left: 22.5px;
+  }
+  .aboutCarousel .owl-nav button.owl-next{
+	right: 22.5px;
+  }
+  .membershipPriceList .secTitle h2:after{
+	left: 50%;
+    transform: translateX(-50%);
+  }
+  .personaliseInner,
+  .luxurius,
+  .membershipBenifit{
+	grid-template-columns: 1fr 1fr;
+  }
+  .destinationListOuter{
+	gap: 30px;
+  }
+  .secTitle h2{
+  	font-size: 42px;
+  }
+  .listingItemContent h4 a{
+	font-size: 20px;
+	line-height: 1.2;
+  }
+  .pageBanner img{
+	max-height: 360px;
+  }
+  .pageBannerInner h2{
+	font-size: 42px;
+  }
+  .mediaPartners{
+  	padding-bottom: 90px;
+  }
+  .desti_icon_main .desti_icon{
+	padding: 8px 10px;
+  }
+  .findBookInner>.item h2{
+    font-size: 48px;
+  }
+  .findBookInner>.item p{
+  	font-size: 18px;
+  }
+  .locationInner{
+	gap: 30px;
+  }
+  .secTitle span{
+  	font-size: 22px;
+  }
+  .destination_sec .owl-nav button.owl-prev{
+		left: 40px;
+	}
+	.destination_sec .owl-nav button.owl-next{
+		right: 40px;
+	}
+	.secTitle h2:after{
+		max-width: 250px;
+		background-size: contain;
+		margin-top: -15px;
+		left: 0;
+		transform: translateX(0);
+	}
+	.secTitle.textCenter h2:after{
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.whyChooseUsInner{
+		gap: 20px;
+	}
+	.whyChooseUsInner .centerImg{
+		left: 0;
+	}
+	.testim .cont>div{
+		gap: 30px;
+	}
+	.primary-btn,
+	.secondary-btn{
+		font-size: 15px;
+		padding: 12px 36px;
+	}
+	.whyFirstCol p,
+	.foreverInner p{
+		margin: 20px 0;
+	}
+	.aboutInner p{
+		margin: 20px 0;
+	}
+	footer .logoItem .footer_social a{
+		width: 40px;
+       height: 40px;
+       border-radius: 10px;
+	}
+	.footerLogo img{
+		max-height: 90px;
+	}
+	footer .logoItem p,
+	.footerMenu li a,
+	.footerReach li span,
+	.blogInner a span{
+		font-size: 15px;
+	}
+	.testim .cont div p{
+		font-size: 16px;
+	}
+	.bookMembership img{
+		max-width: 140px;
+	}
+	.findBookInner>.item>div{
+	  width: 80px;
+      height:80px;
+	}
+	.findBookInner>.item>div>img{
+		max-width: 35px;
+	}
+	header a.logo img {
+	    max-height: 65px;
+	}
+	header .header_inner nav>ul{
+		row-gap: 15px;
+	}
+	.whyChooseUsInner .whyItem{
+		gap: 20px;
+	}
+	.whyChooseUsInner .whyItem .icon{
+		width: 60px;
+		height: 60px;
+		padding: 15px;
+	}
+	.whyChooseUsInner .whyItem .icon img{
+		width: 30px;
+	}
+	.unforgettable .btn{
+		font-size: 16px;
+		padding: 16px 36px;
+	}
+}
+
+@media screen and (min-width:990px){
+	.menuBtn,
+	.mobileView,
+	.mobileMenuHead,
+	.mobileView {
+		display: none;
+	}
+}
+@media screen and (max-width:989px){
+	.travelBg,
+	#testim,
+	.unforgettableMain,
+	.forever,
+	.lightBg,
+	.travelBgWithColor,
+	.popularActivity,
+	.contactOuter,
+	.locationPage,
+	.destiDetailContent,
+	.mainDestination{
+		padding: 60px 0;
+	}
+	.mediaPartners{
+		padding-bottom: 60px;
+	}
+	.sidebar-widget .widget-title{
+	    background:#fff;
+	}
+	.findBookInner{
+		margin-top: 50px;
+		justify-content: space-around;
+	}
+	.destinationListOuterWrapper{
+	 	grid-template-columns:1fr;   
+	}
+	.destinationListOuter{
+	    order:2;
+	}
+	.destinationListOuterWrapper .sidebar-widget{
+	    height:30vh;
+	    overflow:auto;
+	}
+	.starterPopupInner{
+		max-width: calc(100% - 100px);
+	}
+	.luxurius p{
+		margin-top: 10px;
+	}
+	.desti_icon_main .desti_icon p{
+		font-size: 12px;
+	}
+	.desti_icon_main .desti_icon img{
+		font-size: 18px;
+	}
+	.desti_icon_main{
+		gap: 5px;
+	}
+	.listingItemContent{
+		padding: 15px;
+	}
+	.destiDetailContentInner{
+		grid-template-columns: 1fr 1fr;
+	}
+	.personaliseInner .secTitle{
+		margin-bottom: 10px;
+	}
+	.footerInner{
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.loginHead{
+		color: #000;
+	}
+	.locationInner{
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.locationInner img{
+		max-height: 360px;
+	}
+	.footerNewslatter form{
+		display: grid;
+		grid-template-columns: auto 150px;
+	}
+	.luxuryRoom .luxuryRoomInner{
+		grid-template-columns: 1fr 1fr;
+	}
+	.contactInner .inputWrapper{
+		grid-template-columns:1fr;
+	}
+	.contactInner .inputWrapper textarea{
+		grid-column:1/2;
+	}
+	.entertainmentServices,
+	.popularActivityInner,
+	.contactInner{
+		grid-template-columns: 1fr 1fr;
+	}
+	.popularActivityInner .box:first-child {
+		grid-column: 1 / 1;
+	}
+	.popularActivityInner img{
+		width: 100%;
+	}
+	.footerNewslatter form button{
+		margin-top: 0;
+		border-radius: 0 12px 12px 0;
+	}
+	.bookMembershipPopupInner{
+		width: calc(100% - 80px);
+	}
+    .payment{
+		max-width: 100%;
+		margin: 0 50px;
+	}
+	.footerNewslatter form input{
+		border-radius:12px 0 0 12px;
+	}
+    .mediaPartnersInner{
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.mediaPartnersInner img {
+	   max-height: 70px;
+	   margin: auto;
+	}
+	.top_header .top_header_left ul{
+		gap: 0;
+		flex-direction: column;
+		position: absolute;
+		z-index: 999;
+		background: #F1F6FF;
+		padding: 10px;
+		border-radius: 6px;
+		top:100%;
+		display: none;
+    }
+	.top_header .top_header_left ul li:not(:last-child){
+		margin-bottom: 8px;
+	}
+	.photo-album{
+		min-width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		height: auto;
+		justify-content: center;
+	}
+	.photo-album .polaroid{
+		position: relative;
+		left:0;
+		top:0;
+		right: auto;
+		bottom: auto;
+	}
+	.photo-album .large,
+	.photo-album .small,
+	.photo-album .medium,
+	a.polaroid
+    {
+		width: 150px;
+		padding: 10px;
+	}
+	
+	.polaroid img,
+	.photo-album .large img,
+	.photo-album .small img,
+	.photo-album .medium img{
+		height: 150px;
+		width: 150px;
+	}
+	.top_header_left {
+		line-height: 0;
+	}
+	.top_header_left>img{
+		filter: brightness(0) invert(1);
+		width: 26px;
+	}
+	.top_header .top_header_left ul li{
+		justify-content: start;
+	}
+	.top_header .top_header_left ul li img{
+      display: none;
+	}
+	.top_header .top_header_left ul span{
+		color: #000;
+	}
+	.top_header .top_header_left ul li:not(:last-child):after{
+		right: -10px;
+	}
+	.top_header ul.header_social{
+		padding: 0 30px 0 15px;
+	}
+	.mainBanner .banner_wrapper .banner_content{
+		padding: 0 50px;
+		width: 100%;
+	}
+	.aboutInner{
+		gap: 20px;
+	}
+	.testimonial-arrow{
+		left: 400px;
+		transform: translateX(0);
+	}
+	
+	.whyFirstCol{
+		    width: calc(50% - 10px);
+	}
+	.whyChooseUsInner{
+		flex-wrap: wrap;
+	}
+	.centerImg {
+	    width: 50%;
+	    text-align: center;
+	}
+	.whyChooseUsInner>div:last-child{
+		display: flex;
+	    margin-top: 30px;
+	    gap: 20px;
+	}
+	.whyChooseUsInner .whyItem{
+		
+		margin: 0;
+	}
+	.whyChooseUsInner .whyItem:not(:last-child){
+		border-bottom:none;
+	}
+	.blogInner{
+		gap: 30px;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.blogInner a span{
+	    width: calc(100% - 20px);
+	    left: 10px;
+	}
+	.aboutInner img{
+		max-width: 350px;
+	}
+	.aboutHome .secTitle h2:before{
+		left: 200px;
+	}
+	header .header_inner .header_right{
+		display: none;
+	}
+	header .header_inner{
+		padding: 10px 0;
+	}
+	.header_inner nav{
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		background: #fff;
+		inset: 0;
+		padding: 20px 0;
+		box-sizing: border-box;
+		display: none;
+
+	}
+	.big-nav > ul{
+		padding: 20px;
+	}
+	.big-nav > ul > li > a{
+		font-size: 14px;
+		padding-top: 0;
+	}
+	.big-nav > ul > li > ul{
+		left: 10px;
+		top:60px;
+	}
+	.big-nav > ul > li > ul > li a{
+		padding: 0 10px;
+		font-size: 14px;
+	}
+	.big-nav > ul{
+		min-height: 250px !important;
+		overflow: scroll;
+		z-index: 99;
+	}
+	li.fullCol ul{
+		grid-template-columns:1fr;
+	}
+	header .header_inner>nav>ul>li>a{
+		font-size: 16px;
+	}
+	header .header_inner nav>ul{
+		flex-direction: column;
+		padding: 0 20px;
+		margin-top: 30px;
+		gap: 10px;
+	}
+	.userIconMain{
+		position: relative;
+	}
+	.membershipPriceList{
+		padding: 60px 0;
+	}
+	.userIconMain{
+		flex-direction: row;
+		gap: 10px;
+		margin-top: 50px;
+		padding-left: 20px;
+	}
+	ul.profileMenu{
+		left: 10px;
+		right: auto;
+	}
+	nav > ul .big-nav{
+		position: relative;
+	}
+	.top_header ul.header_social{
+		display: none;
+	}
+	.destinationContent h2{
+		font-size: 22px;
+	}
+	.destinationContent h2:after{
+		width: 50px;
+	}
+
+}
+
+@media screen and (max-width:749px){
+  .aboutInner,
+  .personaliseInner, 
+  .luxurius, 
+  .membershipBenifit
+  {
+  	grid-template-columns: 1fr;
+	text-align: center;
+  }
+  .aboutPageInner,
+  .unforgettable,
+  .aboutBenifit,
+  .foreverInner{
+	grid-template-columns: 1fr;
+	text-align: center;
+  }
+  .destiDetailContentInner,
+  .destinationListOuter{
+	grid-template-columns: 1fr;
+  }
+  .listingItemContent h4 a{
+	font-size: 22px;
+  }
+  .contactInner{
+	grid-template-columns: 1fr;
+	gap: 30px;
+  }
+  .bookMembershipForm{
+	max-height: 80vh;
+	overflow-y: auto;
+	padding: 20px;
+  }
+  .pagination li a {
+        font-size: 15px;
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        margin-bottom: 10px;
+    }
+  .payment .payImg img{
+	height: 40px;
+  }
+  .memberLogin{
+	padding: 20px;
+  }
+  .luxuryRoom {
+	grid-template-columns: 1fr 1fr;
+  }
+  .locationInner{
+	gap: 20px;
+  }
+  .item-shorting {
+        margin-bottom: 20px;
+    }
+  .sideItemWrapper{
+	display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .destiDetailContentInner .sideItem:not(:last-child){
+	margin: 0;
+  }
+  .payment h2{
+	margin-bottom: 10px;
+  }
+  .payment{
+	margin: 0 30px;
+	padding: 20px;
+}
+.payment .half{
+	gap: 0;
+}
+.item-shorting .left-column h3 {
+    font-size: 20px;
+}
+  #tabs-nav{
+	row-gap: 10px;
+  }
+  .unforgettable,
+  .aboutPageInner,
+  .membershipBenifit{
+	gap: 20px;
+  }
+  .aboutBenifit .benfitContent,
+  .membershipBenifit div p,
+  .luxurius p{
+	margin-top: 10px;
+  }
+  .personaliseInner .secTitle{
+	margin-bottom: 10px;
+  }
+  .bookMembershipForm h4,
+  .locationInner .box h2{
+	font-size: 22px;
+  }
+  .locationInner{
+	margin-top: 30px;
+  }
+  .locationInner .box h2{
+	bottom: 20px;
+  }
+  .photo-album,
+  .popularActivityInner,
+  .entertainmentServices{
+	margin-top: 30px;
+  }
+  .travelBg,
+  .lightBg{
+	text-align: center;
+  }
+  .singleContent h2{
+	margin-bottom: 10px;
+  }
+  input, textarea, select{
+	padding: 15px;
+  }
+  #tabs-nav li a{
+	padding: 12px 32px;
+	font-size: 15px;
+	border-radius: 10px;
+  }
+  .bookMembershipForm form a{
+	font-size: 14px;
+  }
+  .memberLogin{
+	margin: 0 30px;
+	max-width: 100%;
+  }
+  ul{
+	text-align: left;
+  }
+  .seasonApartmentInner,
+  .luxuryRoom .luxuryRoomInner{
+	margin-top: 30px;
+  }
+  .luxuryRoom .secondary-btn{
+	margin-top: 30px;
+  }
+  .popularActivityInner h4,
+  .entertainmentServices .box h4,
+  .contactLeft .phone-call .text a{
+	font-size: 22px;
+  }
+  .seasonApartmentInner .box{
+	padding: 15px;
+  }
+  .membershipPriceList .primary-btn{
+	margin-top: 30px;
+  }
+  .luxurius,
+  .personaliseInner{
+	gap: 20px;
+  }
+  .unforgettable>div:last-child{
+	text-align: center;
+  }
+  .unforgettable .btn{
+	font-size: 15px;
+	padding: 12px 36px;
+  }
+  .secTitle h2:after,
+  .aboutBenifit .secTitle h2:after,
+  .foreverInner .secTitle h2:after,
+  .personalise .secTitle h2:after{
+	left: 50%;
+    transform: translateX(-50%);
+  }
+  .aboutBenifit .benfitContent,
+  .luxurius p,
+  .luxurius ul,
+  .personalise p,
+  .personalise ul{
+	text-align: left;
+  }
+  .about1Img{
+	margin-bottom: 20px;
+  }
+  .pageBanner img{
+	max-height: 320px;
+  }
+  .whyChooseUsInner{
+  	flex-direction: column;
+  }
+  .whyFirstCol p,
+	.foreverInner p{
+		margin-top: 0px;
+	}
+  .whyFirstCol{
+  	order: 2;
+  	width: 100%;
+  	text-align: center;
+  }
+  .aboutInner div:first-child{
+  	grid-row: 2;
+  }
+  .whyChooseUsInner .centerImg{
+  	order: 1;
+  }
+  .pageBannerInner h2{
+	font-size: 32px;
+	line-height: 1.2;
+  }
+  .whyChooseUsInner>div:last-child{
+  	order: 3;
+  	flex-direction: column;
+  }
+  .testim .cont>div{
+  	grid-template-columns: 1fr;
+  }
+  .testim .cont div .img img{
+  	max-width: 370px;
+  	margin: auto;
+  }
+  .testim .testi-content{
+  	text-align: center;
+  	padding-top: 0px;
+  	padding-bottom: 20px;
+  }
+  .footerNewslatter form{
+		display: grid;
+		grid-template-columns: auto 120px;
+	}
+	.testim .testi-content:before{
+		display: none;
+	}
+	.whyChooseUs .secTitle h2:after{
+		  left: 50%;
+      transform: translateX(-50%);
+	}
+	.testimonial-arrow{
+	  left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+	}
+	.secTitle h2{
+		font-size: 32px;
+	}
+	.secTitle span{
+		font-size: 20px;
+	}
+	.destination,
+	.findBookInner,
+	.travelPartnersInner, 
+	.preferredPartnersInner,
+	.mediaPartnersInner,
+	#testim-content {
+	    margin-top: 30px;
+	}
+	.destinationContent h2{
+		font-size: 22px;
+	}
+	.findBookInner>.item h2{
+		font-size: 36px;
+	}
+	.findBookInner{
+		justify-content: space-around;
+	}
+	.whyChooseUsInner .whyItem{
+		padding-bottom: 0;
+	}
+	.whyChooseUsInner>div:last-child{
+		gap: 30px;
+	}
+	.aboutHome .secTitle h2:before{
+	display: none;
+	}
+	.aboutInner img{
+		max-width: 320px;
+	}
+	.findBookInner>.item>div {
+	    width: 60px;
+	    height: 60px;
+	}
+	.findBookInner>.item>div>img{
+		width: 30px;
+	}
+	.findBookInner>.item p{
+		font-size: 16px;
+	}
+	.findBook{
+		background-size: cover;
+	}
+   .testim .cont div h2{
+   	font-size: 22px;
+   }
+   .centerImg{
+   	width: 100%;
+   }
+   .mainBanner .banner_wrapper .banner_content h1{
+	font-size: 46px;
+   }
+   .starterPopup .starterPopupInner{
+	max-width: calc(100% - 80px);
+   }
+}
+@media screen and (max-width:600px){
+	.mainBannerCarousel .item{
+		height: calc(100vh - 222px);
+	}
+	.container,
+	.container_large {
+	    padding: 0 20px;
+	}
+	.payment {
+		margin: 0 20px;
+	}
+	.bookMembership img {
+		max-width: 100px;
+	}
+    .payment .half{
+		grid-template-columns: 1fr;
+	}
+	.payment input{
+		margin-bottom: 20px;
+	}
+	.destinationDetail .owl-nav button.owl-prev{
+		left:22.5px;
+	}
+	.destinationDetail .owl-nav button.owl-next{
+		right:22.5px;
+	}
+	.amen_icon_main{
+		grid-template-columns: 1fr 1fr;
+	}
+	.sideItemWrapper{
+		grid-template-columns: 1fr;
+	}
+	.payment h2{
+		font-size: 22px;
+	}
+	.bookMembership{
+		right: 10px;
+		bottom: -10px;
+	}
+	.locationInner{
+		grid-template-columns: 1fr;
+	}
+	.luxuryRoom .luxuryRoomInner,
+	.seasonApartmentInner,
+	.entertainmentServices,
+	.popularActivityInner,
+	.membershipInput{
+		grid-template-columns: 1fr;
+	}
+
+	.membershipPriceList .underTable{
+		padding-left: 0;
+	}
+	.findBookInner>.item h2 {
+		font-size: 42px;
+	}
+	.magazineBtn a{
+	   width: 36px;
+       height: 36px;
+	}
+	.mediaPartners{
+		padding-top: 0;
+	}
+	.magazineInner{
+		margin-top: 50px;
+	}
+	.bookMembershipForm h4{
+		font-size: 20px;
+	}
+	.blogInner,
+	.footerInner {
+	    grid-template-columns:1fr;
+	}
+	.blogInner a span{
+	    width: calc(100% - 50px);
+	    left: 25px;
+	}
+	.footerInner {
+	    gap: 40px;
+	}
+.bottomFooterInner{
+	flex-direction: column;
+	padding-top: 20px;
+	padding-bottom: 6px;
+}
+.mediaPartnersInner{
+	grid-template-columns:1fr 1fr;
+	gap: 15px;
+}
+.centerImg img{
+	max-width: 320px;
+}
+.mainBanner .banner_wrapper .banner_content h1{
+	font-size: 32px;
+}
+.mainBanner .banner_wrapper .banner_content .subheading{
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+.findBookInner{
+	flex-direction: column;
+	row-gap: 30px;
+}
+.findBookInner>.item>div{
+	margin-bottom: 10px;
+}
+.testim .cont div .img img{
+	max-width: 320px;
+}
+.testim .cont>div{
+	gap: 20px;
+}
+.travelPartners .owl-item img, .mediaPartners .owl-item img{
+	max-width: calc(100% - 60px);
+	margin: auto;
+}
+.starterPopupInner {
+    max-width: calc(100% - 60px);
+	padding: 10px;
+}
+.starterPopup .starterPopupInner{
+	padding:10px;
+}
+}
+@media screen and (max-width:420px){
+	.aboutInner img,
+	.centerImg img{
+		max-width: 260px;
+	}
+    .photo-album .large, .photo-album .small, .photo-album .medium, a.polaroid{
+		width:140px;
+	}
+	.polaroid img, .photo-album .large img, .photo-album .small img, .photo-album .medium img{
+		width: 140px;
+		height: 140px;
+	}
+	.contactRight form{
+		padding: 15px;
+	}
+	input, textarea, select{
+		padding: 15px;
+	}
+	#tabs-nav li a{
+		padding: 8px 22px;
+		font-size: 14px;
+	}
+	
+}
