@@ -19,29 +19,9 @@
 
 
 
-    <link rel="shortcut icon" href="~/images/favicon.png" type="image/png">
-    <!--====== Google Fonts ======-->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Just+Another+Hand&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <!--====== Flaticon ======-->
-    <link rel="stylesheet" href="~/css/flaticon_tripex.css">
-    <!--====== FontAwesome ======-->
-    <link rel="stylesheet" href="~/css/all.min.css">
-    <!--====== Bootstrap ======-->
-    <link rel="stylesheet" href="~/css/bootstrap.min.css">
-    <!--====== Slick-popup ======-->
-    <link rel="stylesheet" href="~/css/slick.css">
-    <!--====== Magnific-popup ======-->
-    <link rel="stylesheet" href="~/css/magnific-popup.css">
-    <!--====== Nice Select ======-->
-    <link rel="stylesheet" href="~/css/nice-select.css">
-    <!--====== Jquery UI ======-->
-    <link rel="stylesheet" href="~/css/jquery-ui.min.css">
-    <!--====== AOS Animation ======-->
-    <link rel="stylesheet" href="~/css/aos.css">
-    <!--====== Spacings css ======-->
-    <link rel="stylesheet" href="~/css/spacings.css">
+    
     <!--====== Common Style ======-->
-<link rel="stylesheet" href="~/css/common-style.css">
+
 
 
 
@@ -441,97 +421,7 @@ Escape to luxury with Haven Club and Resorts, where every moment is tailored for
     <script src="~/js/fancybox.min.js"></script>
     <script src="~/js/custom.js"></script>
 
-<script type="text/javascript">
 
-    $(document).ready(function(){
-
-        $('#bookSubmit').on("click", function () {
-
-            $('.bm_msg').html('');
-            
-            var name = $('#bm_name').val();
-            var email = $('#bm_email').val();
-            var phone = $('#bm_phone').val();
-            var city = $('#bm_city').val();
-            var gender = $("input[name='bm_gender']:checked").val();
-            var marital = $("input[name='bm_marital']:checked").val();                                   
-            
-            if(name== "" || email=="" || phone=="" || city==""){
-                $('.bm_msg').html('<div style="color: red"><b>All fields are mandatory.</b></div>');  
-                return false;
-            }
-            
-            var emailPattern = /^[^\s]+[^\s]+\.[^\s]+$/;
-            if(!emailPattern.test(email)){
-                $('.bm_msg').html('<div style="color: red">Please enter a valid email address.</div>'); 
-                return false;
-            }
-            
-            if ($("#bm_tnc").prop('checked')==false){ 
-                $('.bm_msg').html('<div style="color: red">Please accept the terms and conditions.</div>');     
-                return false;       
-            }
-            
-            $('#bookSubmit').attr("disabled", "disabled").html("Please Wait...");    
-            
-            $.ajax({
-                method:"POST",
-                url:"https://www.clubliberty.in/home/book_membership",
-                data:{"name":name, "email":email, "phone":phone, "city":city, "gender":gender, "marital":marital},
-                dataType:'JSON',
-                success:function(response){
-                    // alert(res);
-                    if(response['status'] == 1) {
-                        alert("Request Sent Successfully");
-                        $('#bm_name, #bm_email, #bm_phone, #bm_city').val(''); 
-                        $('.bm_msg').html('');         
-                        $('#bookSubmit').removeAttr("disabled").html("Submit");
-                        $('.bm_name_err, .bm_email_err, .bm_phone_err, .bm_city_err').html('');
-                    }
-                    if(response['status'] == 2) {
-                        alert("Oops! Something went wrong. Please try again later.");
-                        $('.bm_msg').html('');
-                        $('#bookSubmit').removeAttr("disabled").html("Submit");
-                        $('.bm_name_err, .bm_email_err, .bm_phone_err, .bm_city_err').html('');
-                    }
-
-                    if(response['status']==0) {
-
-                        $('.bm_msg').html('');
-                        $('#bookSubmit').removeAttr("disabled").html("Submit");
-
-                        if(response['name'] != '') {
-                            $('.bm_name_err').html('<div style="color: red">'+response['name']+'</div>');
-                        } else {
-                            $('.bm_name_err').html('');
-                        }
-
-                        if(response['email'] != '') {
-                            $('.bm_email_err').html('<div style="color: red">'+response['email']+'</div>');
-                        } else {
-                            $('.bm_email_err').html('');
-                        }
-
-                        if(response['phone'] != '') {
-                            $('.bm_phone_err').html('<div style="color: red">'+response['phone']+'</div>');
-                        } else {
-                            $('.bm_phone_err').html('');
-                        }
-
-                        if(response['city'] != '') {
-                            $('.bm_city_err').html('<div style="color: red">'+response['city']+'</div>');
-                        } else {
-                            $('.bm_city_err').html('');
-                        }
-                    }
-                }
-            });
-            
-            
-                            
-        }); 
-    }); 
-</script>
 
     @RenderSection("Scripts", required: false)
 
