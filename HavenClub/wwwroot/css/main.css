@@ -2095,11 +2095,11 @@ padding: 20px;
 }
 
 .destinationDetail .owl-nav button.owl-prev {
-    background-image: url('images/prev.png'); /* Image for the "previous" button */
+    background-image: url('~/images/prev.png'); /* Image for the "previous" button */
 }
 
 .destinationDetail .owl-nav button.owl-next {
-    background-image: url('images/next.png'); /* Image for the "next" button */
+    background-image: url('~/images/next.png'); /* Image for the "next" button */
 }
 .destinationDetail .owl-nav button.owl-prev{
   left: 34px;
