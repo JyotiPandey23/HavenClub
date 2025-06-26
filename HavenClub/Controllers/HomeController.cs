@@ -17,7 +17,8 @@ namespace HavenClub.Controllers
         {
             return View();
         }
-           public IActionResult ContactUs()
+
+        public IActionResult Membership()
         {
             return View();
         }
