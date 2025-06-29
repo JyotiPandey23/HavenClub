@@ -15,7 +15,7 @@
 url("../fonts/flaticon_tripex.woff") format("woff"),
 url("../fonts/flaticon_tripex.eot#iefix") format("embedded-opentype"),
 url("../fonts/flaticon_tripex.ttf") format("truetype"),
-url("../~/~/images/flaticon_tripex.svg#flaticon_tripex") format("svg")
+url("../~/images/flaticon_tripex.svg#flaticon_tripex") format("svg")
 }
 
 i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {

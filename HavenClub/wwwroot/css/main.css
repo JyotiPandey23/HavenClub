@@ -367,77 +367,6 @@ margin-top: 20px;
     background-size: 13px;
     background-position: 220px;
 }
-
-.mainBanner {
-	display: block;
-}
-
-/* Mobile Banner */
-.mobileBanner {
-	display: none;
-}
-
-@media (max-width: 768px) {
-	.banner-slider {
-		gap: 5px;
-		padding: 5px;
-	}
-
-	.itemm {
-		max-width: 90%;
-	}
-
-	.mobileBanner {
-		display: block;
-	}
-
-	.mainBanner {
-		display: none;
-	}
-}
-
-/* Mobile Specific Styles */
-.mobile_banner_wrapper {
-	position: relative;
-	text-align: center;
-	color: white;
-	overflow: hidden;
-}
-
-.mobileVideo {
-	width: 100%;
-	height: 300px;
-	object-fit: cover;
-}
-
-.mobile_banner_content {
-	position: absolute;
-	top: 40%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	text-align: center;
-	z-index: 2;
-}
-
-.mobile_subheading {
-	font-size: 0.7rem;
-	font-weight: bold;
-	color: #fff;
-}
-
-.mobile_banner_content h1 {
-	font-size: 1.6rem;
-	font-weight: bold;
-	color: #fff;
-}
-
-.mobileStrokeText {
-	color: transparent;
-	-webkit-text-stroke: 1px white;
-}
-
-
-
 .aboutHome{
 	background: #F1F6FF;
 	padding: 46px 0 60px 0;
@@ -694,7 +623,6 @@ height: 170px;
     border:1px solid #B9B9B9;
     transform: translate(55px,-50%);
 }
-
 .findBook{
 	background: url('../images/findBook.jpeg')no-repeat;
 	padding: 60px 0 70px;
@@ -1444,7 +1372,7 @@ footer{
 }
 .footerInner{
 	display: grid;
-	gap: 60px;
+	gap: 80px;
 	grid-template-columns: repeat(4, 1fr);
 }
 .footerInner ul{
@@ -2092,14 +2020,6 @@ padding: 20px;
     align-items: center;
     justify-content: center;
     transform: translateY(-50%);
-}
-
-.destinationDetail .owl-nav button.owl-prev {
-    background-image: url('~/images/prev.png'); /* Image for the "previous" button */
-}
-
-.destinationDetail .owl-nav button.owl-next {
-    background-image: url('~/images/next.png'); /* Image for the "next" button */
 }
 .destinationDetail .owl-nav button.owl-prev{
   left: 34px;

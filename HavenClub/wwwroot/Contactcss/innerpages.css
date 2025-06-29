@@ -43,7 +43,7 @@ Version: 1.0
   font-weight: 800;
   line-height: 1;
   letter-spacing: -0.05em;
-  background: url(../~/~/images/footer-text-bg.jpg) no-repeat center;
+  background: url(../~/images/footer-text-bg.jpg) no-repeat center;
   background-size: cover;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
