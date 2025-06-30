@@ -21,7 +21,16 @@ namespace HavenClub.Controllers
         {
             return View();
         }
+        public IActionResult blog()
+        {
+            return View();
+        }
         public IActionResult Membership()
+        {
+            return View();
+        }
+
+             public IActionResult Member_ship()
         {
             return View();
         }
