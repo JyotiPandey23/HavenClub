@@ -17,6 +17,14 @@ namespace HavenClub.Controllers
         {
             return View();
         }
+        public IActionResult TermsAndCondition()
+        {
+            return View();
+        }
+        public IActionResult privacyAndPolicy()
+        {
+            return View();
+        }
         public IActionResult DomesticDestination()
         {
             return View();
