@@ -8,11 +8,7 @@
     <link rel="stylesheet" href="~/price/css/style.css">
 }
 
-
-
-
-
-
+<script src="~/about/js/jquery.min.js"></script>
 
 
 <section class="position-relative space">
@@ -25,76 +21,62 @@
             <div class="col-xl-4 col-md-6">
                 <div class="price-card">
                     <div class="offer-tag">Popular</div>
-                    <div class="price-card_wrapp">
-                        <div class="price-card_icon"><img src="images/price_1_1.svg" alt="img"></div>
-                        <h3 class="box-title">Basic Plan</h3>
+                    <div class="price-card_wrapp justify-content-center">
+                        <h2 class="box-title">Basic Plan</h2>
                     </div>
                     <div class="price-card_content">
-                        <h4 class="price-card_price">$785.00<span class="duration">/Per Night</span></h4>
-                        <p class="price-card_text">Essential services for basic and signle person seeking.</p>
+                        <h4 class="price-card_price">₹74,999<span class="duration">/ 3 Years</span></h4>
                         <div class="checklist">
                             <ul>
-                                <li>Up to 2 members</li>
-                                <li>Room Service Fees</li>
-                                <li>Driver Service Feet</li>
-                                <li>Tour management</li>
-                                <li>Collaboration</li>
-                                <li>Entrance Fees</li>
-                                <li>Guide Fees in Destination</li>
+                                <li>Only India</li>
+                                <li>6N/7D Yearly</li>
+                                <li>Only Accommodations</li>
+                                <li>Only 4 Star Properties</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="price-btn"><a href="contact.html" class="th-btn style3 w-100">Get Started</a></div>
+                    <div class="price-btn"><a class="th-btn style3 w-100" onclick="membershipModal()">Get Started</a></div>
                 </div>
             </div>
             <div class="col-xl-4 col-md-6">
                 <div class="price-card active">
                     <div class="offer-tag">Popular</div>
-                    <div class="price-card_wrapp">
-                        <div class="price-card_icon"><img src="images/price_1_2.svg" alt="img"></div>
-                        <h3 class="box-title">Advanced Plan</h3>
+                    <div class="price-card_wrapp justify-content-center">
+                        <h2 class="box-title">PREMIUM PLAN</h2>
                     </div>
                     <div class="price-card_content">
-                        <h4 class="price-card_price">$980.00<span class="duration">/Per Night</span></h4>
-                        <p class="price-card_text">Essential services for basic and signle person seeking.</p>
+                        <h4 class="price-card_price">₹1,75,000<span class="duration">/ 5 Years</span></h4>
                         <div class="checklist">
                             <ul>
-                                <li>Up to 2 members</li>
-                                <li>Room Service Fees</li>
-                                <li>Driver Service Feet</li>
-                                <li>Tour management</li>
-                                <li>Collaboration</li>
-                                <li>Entrance Fees</li>
-                                <li>Auto refresh ads</li>
+                                <li>India + Asia</li>
+                                <li>6N/7D Yearly</li>
+                                <li>Only Accommodations</li>
+                                <li>Only 4 & 5 Star Properties</li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="price-btn"><a href="contact.html" class="th-btn style3 w-100">Get Started</a></div>
+                    </div>                    
+
+                    <div class="price-btn"><a class="th-btn style3 w-100" onclick="membershipModal()">Get Started</a></div>
                 </div>
             </div>
             <div class="col-xl-4 col-md-6">
                 <div class="price-card">
                     <div class="offer-tag">Popular</div>
-                    <div class="price-card_wrapp">
-                        <div class="price-card_icon"><img src="images/price_1_3.svg" alt="img"></div>
-                        <h3 class="box-title">Premium Plan</h3>
+                    <div class="price-card_wrapp justify-content-center">
+                        <h2 class="box-title ">STANDARD PLAN</h2>
                     </div>
                     <div class="price-card_content">
-                        <h4 class="price-card_price">$1580.00<span class="duration">/Per Night</span></h4>
-                        <p class="price-card_text">Essential services for basic and signle person seeking.</p>
+                        <h4 class="price-card_price">₹3,75,000<span class="duration">/ 10 Years</span></h4>
                         <div class="checklist">
                             <ul>
-                                <li>Up to 2 members</li>
-                                <li>Room Service Fees</li>
-                                <li>Driver Service Feet</li>
-                                <li>Tour management</li>
-                                <li>Collaboration</li>
-                                <li>Entrance Fees</li>
-                                <li>Auto refresh ads</li>
+                                <li>India + Asia + Europe</li>
+                                <li>6N/7D Yearly</li>
+                                <li>Only Accommodations</li>
+                                <li>Only 5 Star Properties</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="price-btn"><a href="contact.html" class="th-btn style3 w-100">Get Started</a></div>
+                    <div class="price-btn"><a class="th-btn style3 w-100" onclick="membershipModal()">Get Started</a></div>
                 </div>
             </div>
         </div>       
@@ -102,6 +84,209 @@
 </section>
 
 
+
+
+
+
+<!-- Membership Modal -->
+<div id="subscribeModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title">Join Our Membership</h2>
+            <button class="btn-close" onclick="closeModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <form id="membershipForm">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <input type="text" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="tel" class="form-control" placeholder="Phone Number" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <input type="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <select class="form-control" required>
+                            <option value="" selected disabled>Select Membership</option>
+                            <option>Orange Membership ($99/year)</option>
+                            <option>Green Membership ($149/year)</option>
+                            <option>Blue Membership ($199/year)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <input type="number" class="form-control" placeholder="Number Of Adults" min="1" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="number" class="form-control" placeholder="Number Of Kids" min="0">
+                    </div>
+                </div>
+                <div class="form-check mb-4">
+                    <input type="checkbox" class="form-check-input" id="termsCheck" required>
+                    <label class="form-check-label" for="termsCheck">I agree to the terms and conditions</label>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-submit">Submit Application</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Modal Styles */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.7);
+        overflow: auto;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+        .modal.active {
+            display: block;
+            opacity: 1;
+        }
+
+    .modal-content {
+        background: #fff;
+        margin: 8% auto;
+        padding: 30px;
+        width: 90%;
+        max-width: 600px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        position: relative;
+        transform: translateY(-20px);
+        transition: transform 0.3s ease;
+    }
+
+    .modal.active .modal-content {
+        transform: translateY(0);
+    }
+
+    .modal-header {
+        padding-bottom: 15px;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 20px;
+    }
+
+    .modal-title {
+        color: #2c3e50;
+        font-size: 24px;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .btn-close {
+        position: absolute;
+        right: 25px;
+        top: 25px;
+        background: transparent;
+        border: none;
+        font-size: 28px;
+        color: #7f8c8d;
+        cursor: pointer;
+        transition: color 0.2s;
+    }
+
+        .btn-close:hover {
+            color: #e74c3c;
+        }
+
+    /* Form Styles */
+    .form-control {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 16px;
+        transition: border 0.3s;
+    }
+
+        .form-control:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+
+    .form-check {
+        text-align: left;
+        margin-top: 15px;
+    }
+
+    .btn-submit {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        font-size: 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-weight: 500;
+    }
+
+        .btn-submit:hover {
+            background-color: #2980b9;
+        }
+
+    
+
+    .modal-title {
+        font-size: 20px;
+    }
+
+    .btn-close {
+        right: 15px;
+        top: 15px;
+        font-size: 24px;
+    }
+
+    
+</style>
+
+<script>
+    // Initialize testimonial slider
+    $(document).ready(function(){
+        $('.testimonial-slider').slick({
+            dots: true,
+            arrows: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            adaptiveHeight: true,
+            autoplay: true,
+            autoplaySpeed: 5000
+        });
+    });
+
+    function membershipModal() {
+        document.getElementById('subscribeModal').classList.add('active');
+    }
+
+    function closeModal() {
+        document.getElementById('subscribeModal').classList.remove('active');
+    }
+
+    window.addEventListener('click', function(e) {
+        const modal = document.getElementById('subscribeModal');
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+</script>
 
 
 
