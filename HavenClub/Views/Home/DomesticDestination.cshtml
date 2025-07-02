@@ -1320,47 +1320,47 @@
 
 <script type="text/javascript">
 
-    $(document).ready(function(){
+    // $(document).ready(function(){
 
-        filter_data();
+    //     filter_data();
 
-        function filter_data(page_no) {
+    //     function filter_data(page_no) {
 
-            // $('.loader-cart').show();
-            var cities_arr = get_cities();
-            var category = 'domestic';
+    //         // $('.loader-cart').show();
+    //         var cities_arr = get_cities();
+    //         var category = 'domestic';
 
-             $.ajax({
-                url:'https://www.clubliberty.in/home/get_resorts',
-                method:"POST",
-                data:{cities_arr:cities_arr, page_no:page_no, category:category},
-                success:function(data){
-                 // alert(data);
-                 // $('.loader-cart').hide();
-                    $('#filtered_data').html(data);
-                }
-            });
-        }
+    //          $.ajax({
+    //             url:'https://www.clubliberty.in/home/get_resorts',
+    //             method:"POST",
+    //             data:{cities_arr:cities_arr, page_no:page_no, category:category},
+    //             success:function(data){
+    //              // alert(data);
+    //              // $('.loader-cart').hide();
+    //                 $('#filtered_data').html(data);
+    //             }
+    //         });
+    //     }
 
-        function get_cities() {
-            var arr = [];
-            $('.cities:checked').each(function(){
-                arr.push($(this).val());
-            });
-            return arr;
-        }
+    //     function get_cities() {
+    //         var arr = [];
+    //         $('.cities:checked').each(function(){
+    //             arr.push($(this).val());
+    //         });
+    //         return arr;
+    //     }
 
-        $('.cities').click(function(){
-            filter_data();
-        });
+    //     $('.cities').click(function(){
+    //         filter_data();
+    //     });
 
-        $(document).on('click','a.paginate', function(e){
-            e.preventDefault();
-            var page_id = $(this).attr('id');
-            filter_data(page_id);
-        });
+    //     $(document).on('click','a.paginate', function(e){
+    //         e.preventDefault();
+    //         var page_id = $(this).attr('id');
+    //         filter_data(page_id);
+    //     });
 
-    });
+    // });
 
 </script>
 }
