@@ -2940,6 +2940,8 @@ a.polaroid:hover, a.polaroid:focus, a.polaroid:active {
    	line-height: 0;
    	position: relative;
 }
+
+
 .customercarePopup,
 .bookMembershipPopup{
 	display: none;
@@ -3010,6 +3012,9 @@ a.polaroid:hover, a.polaroid:focus, a.polaroid:active {
 .bookMembershipPopupInner button.close{
 	z-index: 9;
 }
+
+
+
 .checkTc{
 	display: grid;
 	grid-template-columns: 15px auto;
@@ -3398,5 +3403,24 @@ img.menuRemove {
     font-weight: 600;
 }
 
+.submitWrapper {
+	text-align: center;
+	margin-top: 20px;
+}
 
+.submitBtn {
+	background-color: #007BFF;
+	color: white;
+	padding: 12px 25px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	width: 100%;
+	max-width: 200px; 
+	transition: background-color 0.3s ease;
+}
 
+	.submitBtn:hover {
+		background-color: #0056b3;
+	}

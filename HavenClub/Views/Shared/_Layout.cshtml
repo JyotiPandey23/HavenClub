@@ -135,72 +135,48 @@ fbq('track', 'PageView');
             <img src="~/images/customer-popup.jpg">
      </div>
    </div>
-   <div class="bookMembershipPopup">
-     <div class="bookMembershipPopupInner">
-        <button class="close">x</button>
-         <div class="bookMembershipForm">
-            <h4>Apply For A Membership <small class="bm_msg"></small></h4>
-            <form>
-               <div class="membershipInput">
-                  <div class="form-group">
-                       <label>Name</label>
-                       <input type="text" name="bm_name" id="bm_name" placeholder="Enter Full Name">
-                       
-                  </div>
-                  <div class="form-group">
-                       <label>Email Address</label>
-                       <input type="email" name="bm_email" id="bm_email" placeholder="Enter Email Address">
-                       
-                  </div>
-                  <div class="form-group">
-                     <label>Phone Number</label>
-                     <input type="text" name="bm_phone" id="bm_phone" placeholder="Enter Phone Number" maxlength="10" minlength="10">
-                     
-                  </div>
-                  <div class="form-group">
-                     <label>City</label>
-                     <input type="text" name="bm_city" id="bm_city" placeholder="Enter City">
-                       
-                  </div>
-               </div>
-               <div class="form-group">
-                    <label>Gender</label>
-                    <div class="radioItemWrap">
-                       <div class="radioItem">
-                           <input type="radio" name="bm_gender" value="Male" checked="">
-                           <label>Male</label>
-                       </div>
-                       <div class="radioItem">
-                           <input type="radio" name="bm_gender" value="Female" checked="">
-                           <label>Female</label>
-                       </div>
-                    </div>
-               </div>
-               <div class="form-group">
-                    <label>Marital Status</label>
-                    <div class="radioItemWrap">
-                       <div class="radioItem">
-                           <input type="radio" name="bm_marital" value="Married" checked="">
-                           <label>Married</label>
-                       </div>
-                       <div class="radioItem">
-                           <input type="radio" name="bm_marital" value="Unmarried" checked="">
-                           <label>Unmarried</label>
-                       </div>
-                    </div>
-               </div>
-               <div class="form-group">
-                  <div class="checkTc">
-                     <input type="checkbox" name="bm_tnc" id="bm_tnc">
-                     <label>I accept <a href="https://www.clubliberty.in/terms-and-conditions" target="_blank">Terms and Conditions</a></label>
-                  </div>
-               </div>
-               
-               <button type="button" class="secondary-btn" id="bookSubmit">Submit</button>
-            </form>
-         </div>
-     </div>
-   </div>
+	<!-- HTML Structure -->
+	<div class="bookMembershipPopup">
+		<div class="bookMembershipPopupInner">
+			<button class="close">×</button>
+			<div class="bookMembershipForm">
+				<h4>Apply For A Membership <small class="bm_msg"></small></h4>
+				<form>
+					<div class="membershipInput">
+						<div class="form-group">
+							<label for="bm_name">Name</label>
+							<input type="text" name="bm_name" id="bm_name" placeholder="Enter Full Name">
+						</div>
+						<div class="form-group">
+							<label for="bm_email">Email Address</label>
+							<input type="email" name="bm_email" id="bm_email" placeholder="Enter Email Address">
+						</div>
+						<div class="form-group">
+							<label for="bm_phone">Phone Number</label>
+							<input type="text" name="bm_phone" id="bm_phone" placeholder="Enter Phone Number" maxlength="10" minlength="10">
+						</div>
+						<div class="form-group">
+							<label for="bm_city">City</label>
+							<input type="text" name="bm_city" id="bm_city" placeholder="Enter City">
+						</div>
+						<div class="form-group">
+							<label for="bm_age">Age</label>
+							<input type="number" name="bm_age" id="bm_age" placeholder="Enter Age">
+						</div>
+						<div class="form-group">
+							<label for="bm_member">Already a Member?</label>
+							<input type="text" name="bm_member" id="bm_member" placeholder="Yes or No">
+						</div>
+					</div>
+					<div class="form-group submitWrapper">
+						<button type="submit" class="submitBtn">Submit</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+
 <div class="top_header">
   <div class="container_large">
   	<div class="top_header_inner">
@@ -427,3 +403,27 @@ Escape to luxury with Haven Club and Resorts, where every moment is tailored for
 
 
 </body></html>
+
+
+<script>
+	window.addEventListener('DOMContentLoaded', function () {
+	  const popup = document.querySelector('.bookMembershipPopup');
+	  const popupAlreadyShown = localStorage.getItem('popupShown');
+
+	  if (!popupAlreadyShown) {
+		popup.style.display = 'flex';
+		localStorage.setItem('popupShown', 'true');
+	  }
+	  document.querySelectorAll('.close').forEach(function (btn) {
+		btn.addEventListener('click', function () {
+		  btn.closest('.bookMembershipPopup').style.display = 'none';
+		});
+	  });
+	  window.addEventListener('click', function (e) {
+		if (e.target === popup) {
+		  popup.style.display = 'none';
+		}
+	  });
+	});
+</script>
+

@@ -67,5 +67,10 @@ namespace HavenClub.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public IActionResult MemberLogin()
+        {
+            return View();
+        }
     }
 }

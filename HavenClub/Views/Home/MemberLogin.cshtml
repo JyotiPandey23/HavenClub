@@ -1,0 +1,127 @@
+﻿<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="~/css/memberslogin.css" rel="stylesheet" />
+<!-- Login Hero -->
+<section class="login-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://assests/images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center; background-size: cover;">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Member Login Portal</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">Member Login</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<!-- Login Grid -->
+<div class="container">
+    <div class="login-grid">
+        <!-- Login Benefits -->
+        <div class="login-benefits">
+            <div class="section-heading">
+                <span class="subtitle">Member Benefits</span>
+                <h2 class="title">Exclusive Access</h2>
+            </div>
+
+            <div class="benefits-list">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-calendar-star"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h4>Reservation Management</h4>
+                        <p>View, modify, or cancel your upcoming stays with our easy-to-use interface.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h4>Exclusive Offers</h4>
+                        <p>Access members-only deals and special promotions not available to the public.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-concierge-bell"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h4>Personal Concierge</h4>
+                        <p>Request special services, amenities, or experiences for your next stay.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h4>Reward Points</h4>
+                        <p>Track and redeem your loyalty points for room upgrades and special perks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login Form -->
+        <div class="login-form-container">
+            <div class="section-heading">
+                <span class="subtitle">Welcome Back</span>
+                <h2 class="title">Member Sign In</h2>
+            </div>
+
+            <form class="login-form" action="#" method="post">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="memberId" placeholder=" " required>
+                    <label for="memberId" class="form-label">Member ID</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password" placeholder=" " required>
+                    <label for="password" class="form-label">Password</label>
+                    <div class="password-toggle" id="togglePassword">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Sign In</button>
+
+                <div class="form-footer">
+                    <a href="#" class="forgot-link">Forgot your password?</a>
+                    <p>Not a member? <a href="/membership" class="register-link">Join Now</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Password toggle functionality
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#password');
+
+        togglePassword.addEventListener('click', function() {
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            this.innerHTML = type === 'password' ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>';
+        });
+
+        // Add focus effects to form controls
+        const formControls = document.querySelectorAll('.form-control');
+        formControls.forEach(control => {
+            control.addEventListener('focus', function() {
+                this.parentElement.classList.add('focused');
+            });
+
+            control.addEventListener('blur', function() {
+                this.parentElement.classList.remove('focused');
+            });
+        });
+    });
+</script>
