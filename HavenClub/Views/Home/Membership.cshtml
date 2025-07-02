@@ -1,168 +1,292 @@
-﻿
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pricing Plans</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 40px 20px;
-            color: #000;
-            background-color: #f5f5f5;
-        }
+﻿@section Styles
+{
+    <link rel="stylesheet" href="~/price/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/price/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/price/css/fontawesome.min.css">
+    <link rel="stylesheet" href="~/price/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="~/price/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="~/price/css/style.css">
+}
 
-        .plans-container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            gap: 30px;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            margin: auto;
-        }
+<script src="~/about/js/jquery.min.js"></script>
 
-        .plan {
-            background-color: #fff;
-            border-radius: 15px;
-            width: 300px;
-            position: relative;
-            padding: 25px 25px 100px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
 
-        .premium {
-            height: 500px;
-            z-index: 2;
-            transform: scale(1.05);
-        }
-
-        .plan-title {
-            text-align: center;
-            color: #001e6c;
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        .plan-features {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-            .plan-features li {
-                margin-bottom: 12px;
-                font-size: 15px;
-                position: relative;
-                padding-left: 25px;
-                color: #333;
-            }
-
-                .plan-features li::before {
-                    content: "✔";
-                    color: #001e6c;
-                    font-weight: bold;
-                    position: absolute;
-                    left: 0;
-                }
-
-        .price-bar {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: #7200b8;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            font-size: 20px;
-            font-weight: bold;
-            border-radius: 0 0 15px 15px;
-        }
-
-        .badge {
-            position: absolute;
-            top: -15px;
-            right: -15px;
-            background: #7e00ff;
-            color: #fff;
-            padding: 6px 12px;
-            font-size: 12px;
-            font-weight: bold;
-            border-radius: 20px;
-        }
-    </style>
-</head>
-<body>
-    <div class="plans-container" style="padding-top:50px;">
-
-        <!-- Basic Plan -->
-        <div class="plan basic" style="min-height: 400px;">
-            <div class="plan-title">BASIC PLAN (3 Years)</div>
-            <ul class="plan-features">
-                <li>Price ₹74,999</li>
-                <li>Only India</li>
-                <li>6N/7D Yearly</li>
-                <li>Only Accommodations</li>
-                <li>Only 4 Star Properties</li>
-                <li>Travel Insurance Included</li>
-                <li>Dedicated Customer Support</li>
-                <li>Access to Festival Deals</li>
-                <li>One Free Airport Transfer / Year</li>
-                <li>Exclusive Loyalty Points</li>
-            </ul>
-            <div class="price-bar">₹ 74,999 /-</div>
+<section class="position-relative space">
+    <div class="container">
+        <div class="title-area text-center">
+            <span class="sub-title">Let’s Checkin</span>
+            <h2 class="sec-title">Affordable Pricing plans</h2>
         </div>
+        <div class="row gy-4 justify-content-center">
+            <div class="col-xl-4 col-md-6">
+                <div class="price-card">
+                    <div class="offer-tag">Popular</div>
+                    <div class="price-card_wrapp justify-content-center">
+                        <h2 class="box-title">Basic Plan</h2>
+                    </div>
+                    <div class="price-card_content">
+                        <h4 class="price-card_price">₹74,999<span class="duration">/ 3 Years</span></h4>
+                        <div class="checklist">
+                            <ul>
+                                <li>Only India</li>
+                                <li>6N/7D Yearly</li>
+                                <li>Only Accommodations</li>
+                                <li>Only 4 Star Properties</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="price-btn"><a class="th-btn style3 w-100" onclick="membershipModal()">Get Started</a></div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+                <div class="price-card active">
+                    <div class="offer-tag">Popular</div>
+                    <div class="price-card_wrapp justify-content-center">
+                        <h2 class="box-title">PREMIUM PLAN</h2>
+                    </div>
+                    <div class="price-card_content">
+                        <h4 class="price-card_price">₹1,75,000<span class="duration">/ 5 Years</span></h4>
+                        <div class="checklist">
+                            <ul>
+                                <li>India + Asia</li>
+                                <li>6N/7D Yearly</li>
+                                <li>Only Accommodations</li>
+                                <li>Only 4 & 5 Star Properties</li>
+                            </ul>
+                        </div>
+                    </div>                    
 
-        <!-- Premium Plan -->
-        <div class="plan premium">
-            <div class="badge">BEST VALUE</div>
-            <div class="plan-title">PREMIUM PLAN (5 Years)</div>
-            <ul class="plan-features">
-                <li>Price ₹1,75,000</li>
-                <li>India + Asia</li>
-                <li>6N/7D Yearly</li>
-                <li>Only Accommodations</li>
-                <li>Only 4 & 5 Star Properties</li>
-                <li>Travel Concierge Services</li>
-                <li>2 Free Airport Transfers / Year</li>
-                <li>Festival & Holiday Priority Bookings</li>
-                @* <li>Free Spa Coupons (Selected Hotels)</li> *@
-                @* <li>Dedicated Relationship Manager</li> *@
-               @*  <li>Complimentary Spa Treatment Once a Year</li> *@
-                <li>VIP Lounge Access at Select Airports</li>
-                <li>Early Check-in & Late Check-out Privileges</li>
-                <li>Free Room Decor for Special Occasions (Birthday/Anniversary)</li>
-                <li>Priority Reservation at Partner Resorts</li>
-            </ul>
-
-            <div class="price-bar">₹ 1,75,000 /-</div>
-        </div>
-
-        <!-- Standard Plan -->
-        <div class="plan standard" style="min-height:400px;">
-            <div class="plan-title">STANDARD PLAN (10 Years)</div>
-            <ul class="plan-features">
-                <li>Price ₹3,75,000</li>
-                <li>India + Asia + Europe</li>
-                <li>6N/7D Yearly</li>
-                <li>Only Accommodations</li>
-                <li>Only 5 Star Properties</li>
-                <li>Global Assistance 24/7</li>
-                <li>Complimentary Room Upgrade</li>
-                <li>Free Meals in Select Hotels</li>
-                <li>3 Free Airport Transfers / Year</li>
-                <li>Annual Luxury Gift Box</li>
-            </ul>
-            <div class="price-bar">₹ 3,75,000 /-</div>
-        </div>
-
+                    <div class="price-btn"><a class="th-btn style3 w-100" onclick="membershipModal()">Get Started</a></div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+                <div class="price-card">
+                    <div class="offer-tag">Popular</div>
+                    <div class="price-card_wrapp justify-content-center">
+                        <h2 class="box-title ">STANDARD PLAN</h2>
+                    </div>
+                    <div class="price-card_content">
+                        <h4 class="price-card_price">₹3,75,000<span class="duration">/ 10 Years</span></h4>
+                        <div class="checklist">
+                            <ul>
+                                <li>India + Asia + Europe</li>
+                                <li>6N/7D Yearly</li>
+                                <li>Only Accommodations</li>
+                                <li>Only 5 Star Properties</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="price-btn"><a class="th-btn style3 w-100" onclick="membershipModal()">Get Started</a></div>
+                </div>
+            </div>
+        </div>       
     </div>
-</body>
-</html>
+</section>
+
+
+
+
+
+
+<!-- Membership Modal -->
+<div id="subscribeModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title">Join Our Membership</h2>
+            <button class="btn-close" onclick="closeModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <form id="membershipForm">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <input type="text" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="tel" class="form-control" placeholder="Phone Number" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <input type="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <select class="form-control" required>
+                            <option value="" selected disabled>Select Membership</option>
+                            <option>Orange Membership ($99/year)</option>
+                            <option>Green Membership ($149/year)</option>
+                            <option>Blue Membership ($199/year)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <input type="number" class="form-control" placeholder="Number Of Adults" min="1" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="number" class="form-control" placeholder="Number Of Kids" min="0">
+                    </div>
+                </div>
+                <div class="form-check mb-4">
+                    <input type="checkbox" class="form-check-input" id="termsCheck" required>
+                    <label class="form-check-label" for="termsCheck">I agree to the terms and conditions</label>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-submit">Submit Application</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Modal Styles */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.7);
+        overflow: auto;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+        .modal.active {
+            display: block;
+            opacity: 1;
+        }
+
+    .modal-content {
+        background: #fff;
+        margin: 8% auto;
+        padding: 30px;
+        width: 90%;
+        max-width: 600px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        position: relative;
+        transform: translateY(-20px);
+        transition: transform 0.3s ease;
+    }
+
+    .modal.active .modal-content {
+        transform: translateY(0);
+    }
+
+    .modal-header {
+        padding-bottom: 15px;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 20px;
+    }
+
+    .modal-title {
+        color: #2c3e50;
+        font-size: 24px;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .btn-close {
+        position: absolute;
+        right: 25px;
+        top: 25px;
+        background: transparent;
+        border: none;
+        font-size: 28px;
+        color: #7f8c8d;
+        cursor: pointer;
+        transition: color 0.2s;
+    }
+
+        .btn-close:hover {
+            color: #e74c3c;
+        }
+
+    /* Form Styles */
+    .form-control {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 16px;
+        transition: border 0.3s;
+    }
+
+        .form-control:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+
+    .form-check {
+        text-align: left;
+        margin-top: 15px;
+    }
+
+    .btn-submit {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        font-size: 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-weight: 500;
+    }
+
+        .btn-submit:hover {
+            background-color: #2980b9;
+        }
+
+    
+
+    .modal-title {
+        font-size: 20px;
+    }
+
+    .btn-close {
+        right: 15px;
+        top: 15px;
+        font-size: 24px;
+    }
+
+    
+</style>
+
+<script>
+    // Initialize testimonial slider
+    $(document).ready(function(){
+        $('.testimonial-slider').slick({
+            dots: true,
+            arrows: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            adaptiveHeight: true,
+            autoplay: true,
+            autoplaySpeed: 5000
+        });
+    });
+
+    function membershipModal() {
+        document.getElementById('subscribeModal').classList.add('active');
+    }
+
+    function closeModal() {
+        document.getElementById('subscribeModal').classList.remove('active');
+    }
+
+    window.addEventListener('click', function(e) {
+        const modal = document.getElementById('subscribeModal');
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+</script>
+
+
+
