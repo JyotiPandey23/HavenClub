@@ -29,6 +29,10 @@ namespace HavenClub.Controllers
         {
             return View();
         }
+        public IActionResult InternationalDestination()
+        {
+            return View();
+        }
         public IActionResult blog()
         {
             return View();
