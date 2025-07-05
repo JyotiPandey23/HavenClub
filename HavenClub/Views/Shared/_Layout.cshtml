@@ -11,7 +11,42 @@
   
     <link rel="stylesheet" type="text/css" href="~/css/responsive.css">
 
-
+	meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google-site-verification" content="xBR5XKFf6D4zPRYBCoCB51zT6OdaaPjMxCol6LSmXO8">
+	<meta name="p:domain_verify" content="05cbeadae6d2cf52b0bbe71723430576">
+	<title>Haven Club And Resorts Private </title>
+	<meta name="description" content="Experience luxury at Liberty Vacations International's premium hotels & resorts. Enjoy affordable prices, deluxe comfort, and unforgettable hospitality with top-rated reviews. Book your holiday now!">
+	<link rel="canonical" href="https://www.clubliberty.in/">
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css2?family=Fasthand&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="css/fancybox.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<meta content="https://www.facebook.com/libertyvacationsinternational/about" property="fb:profile_id">
+	<meta content="https://www.facebook.com/libertyvacationsinternational/" property="og:see_also">
+	<meta content="en_US" property="og:locale">
+	<meta content="Liberty Vacations International" property="og:site_name">
+	<meta content="website" property="og:type">
+	<meta content="https://www.clubliberty.in/" property="og:url">
+	<meta content="Liberty Vacations International" property="og:title">
+	<meta content="Experience luxury accommodation at Liberty Vacations International hotels and resorts: affordable prices, premium amenities, and unforgettable hospitality with good reviews!">
+	<meta content="images/Liberty-Vacations-International-logo.png" property="og:image">
+	<meta content="https://www.facebook.com/libertyvacationsinternational" property="og:see_also">
+	<meta content="https://www.instagram.com/clubliberty.in/" property="og:see_also">
+	<meta content="https://twitter.com/ClubLiberty_in" property="og:see_also">
+	<meta content="https://www.linkedin.com/company/libertyvacationsinternational/" property="og:see_also">
+	<meta content="https://www.youtube.com/libertyvacationsinternational" property="og:see_also">
+	<meta content="https://in.pinterest.com/libertyvacationsinternational/" property="og:see_also">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="ClubLiberty_in">
+	<meta name="twitter:creator" content="ClubLiberty_in">
+	<meta name="twitter:title" content="Liberty Vacations International">
+	<meta name="twitter:description" content="Liberty Vacations International is a Hospitality Service Provider Company that a traveller can hire and trust them for a luxurious tour.">
+	<meta name="twitter:image" content="https://pbs.twimg.com/profile_banners/1593934512630558725/1706597355/1080x360">
 
 
     
@@ -101,6 +136,7 @@ fbq('track', 'PageView');
 </head>
 
 <body>
+
    <div class="customercarePopup">
      <div class="starterPopupInner">
         <button class="close">x</button>
@@ -380,13 +416,15 @@ Escape to luxury with Haven Club and Resorts, where every moment is tailored for
 
 <script>
 	window.addEventListener('DOMContentLoaded', function () {
+
 	  const popup = document.querySelector('.bookMembershipPopup');
 	  const popupAlreadyShown = localStorage.getItem('popupShown');
-
+	  console.log(popupAlreadyShown,'popupAlreadyShown')
 	  if (!popupAlreadyShown) {
 		popup.style.display = 'flex';
 		localStorage.setItem('popupShown', 'true');
 	  }
+	
 	  document.querySelectorAll('.close').forEach(function (btn) {
 		btn.addEventListener('click', function () {
 		  btn.closest('.bookMembershipPopup').style.display = 'none';
