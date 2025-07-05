@@ -1,7 +1,5 @@
 ﻿<!DOCTYPE html><html><head>
 	
-@* 	<link rel="canonical" href="https://www.clubliberty.in/"> *@
-    @* <link rel="icon" type="image/x-icon" href="~/images/favicon.ico"> *@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 	<link href="https://fonts.googleapis.com/css2?family=Fasthand&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -10,8 +8,6 @@
 	<link rel="stylesheet" type="text/css" href="~/css/main.css">
   
     <link rel="stylesheet" type="text/css" href="~/css/responsive.css">
-
-	meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="google-site-verification" content="xBR5XKFf6D4zPRYBCoCB51zT6OdaaPjMxCol6LSmXO8">
 	<meta name="p:domain_verify" content="05cbeadae6d2cf52b0bbe71723430576">
@@ -254,14 +250,7 @@ fbq('track', 'PageView');
 								<li><a asp-controller="Home" asp-action="InternationalDestination">International</a></li>
 	       	 	  </ul>
 	       	 	</li>
-						<li><a asp-controller="Home" asp-action="blog">Travel Blog</a></li>
-	       	 	<!-- <li><a href="#">Gallery</a>
-                  <ul>
-                     <li><a href="https://www.clubliberty.in/gallery">Photo Gallery</a></li>
-                     <li><a href="https://www.clubliberty.in/video-gallery">Video Gallery</a></li>
-                  </ul>
-               </li> -->
-						
+						<li><a asp-controller="Home" asp-action="blog">Travel Blog</a></li>					
 						<li><a asp-controller="Home" asp-action="ContactUs">Contact Us</a></li>
 	       	 </ul>
 
@@ -413,23 +402,29 @@ Escape to luxury with Haven Club and Resorts, where every moment is tailored for
 
 </body></html>
 
-
 <script>
 	window.addEventListener('DOMContentLoaded', function () {
-
 	  const popup = document.querySelector('.bookMembershipPopup');
+
+	  if (!popup) {
+		console.warn('Popup element not found.');
+		return;
+	  }
+
 	  const popupAlreadyShown = localStorage.getItem('popupShown');
-	  console.log(popupAlreadyShown,'popupAlreadyShown')
+	  console.log('popupAlreadyShown:', popupAlreadyShown);
+
 	  if (!popupAlreadyShown) {
 		popup.style.display = 'flex';
 		localStorage.setItem('popupShown', 'true');
 	  }
-	
-	  document.querySelectorAll('.close').forEach(function (btn) {
+
+	  popup.querySelectorAll('.close').forEach(function (btn) {
 		btn.addEventListener('click', function () {
-		  btn.closest('.bookMembershipPopup').style.display = 'none';
+		  popup.style.display = 'none';
 		});
 	  });
+
 	  window.addEventListener('click', function (e) {
 		if (e.target === popup) {
 		  popup.style.display = 'none';
@@ -437,4 +432,3 @@ Escape to luxury with Haven Club and Resorts, where every moment is tailored for
 	  });
 	});
 </script>
-
