@@ -216,33 +216,6 @@ $('.destinationDetail').owlCarousel({
     navText: ["<img src='https://clubliberty.in/asset/img/icons/prev.png'>","<img src='https://clubliberty.in/asset/img/icons/next.png'>"],
      items:1
 });
-
-$(".testimonial-carousel").owlCarousel({
-    center: true,
-    items: 3,
-    loop: true,
-    dots: true,
-    smartSpeed: 1500,
-    responsive: {
-        0: {
-            items: 1,
-            margin: 20
-        },
-        576: {
-            items: 2,
-            margin: 20
-        },
-        992: {
-            items: 3,
-            margin: 90
-        },
-        1200: {
-            items: 3,
-            margin: 120
-        },
-    }
-});
-
 //main banner
 $('.mainBannerCarousel').owlCarousel({
     loop:true,
