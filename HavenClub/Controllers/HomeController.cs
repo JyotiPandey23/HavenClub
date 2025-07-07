@@ -25,6 +25,10 @@ namespace HavenClub.Controllers
         {
             return View();
         }
+        public IActionResult PayAndPolicy()
+        {
+            return View();
+        }
         public IActionResult DomesticDestination()
         {
             return View();
