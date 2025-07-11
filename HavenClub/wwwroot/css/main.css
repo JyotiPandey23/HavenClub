@@ -1542,13 +1542,19 @@ footer div h2{
     z-index: 1;
 
 }
-.pageBannerInner h2{
-	color: #FFF;
-	font-size: 45px;
-	font-weight: 700;
-	line-height: normal;
-	letter-spacing: 0.9px;
-}
+	.pageBannerInner h2 {
+		color: #FFF;
+		font-size: 45px;
+		font-weight: 700;
+		line-height: normal;
+		letter-spacing: 0.9px;
+		display: flex;
+
+		justify-content: center; /* Horizontal center */
+		align-items: center; /* Vertical center */
+		text-align: center; /* Center text if it's multiline */
+		height: 100%;
+	}
 .aboutPageInner img{
   max-width: 100%;
 }
