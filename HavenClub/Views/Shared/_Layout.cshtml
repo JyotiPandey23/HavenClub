@@ -185,8 +185,10 @@ fbq('track', 'PageView');
         <img src="~/images/down.png" class="mobileView">
 	  		<ul>
 	  			<li class="custoPop">
+					  <a asp-controller="Home" asp-action="ContactUs">
 	  				<img src="~/images/phone.png">
 	  				<span>Customer care support</span>
+					  </a>
 	  			</li>
 	  			<li>
 							<a asp-controller="Home" asp-action="ContactUs">
@@ -195,9 +197,9 @@ fbq('track', 'PageView');
 	  				</a>
 	  			</li>
 	  			<li>
-	  				<a href="#">
+							<a asp-controller="Home" asp-action="Membership">
                                 <img src="~/images/giftbox.png">
-		  				<span>Voucher</span>
+		  				<span>MemberShip Plan</span>
 		  			</a>
 	  			</li>
 	  		</ul>
@@ -422,6 +424,7 @@ Escape to luxury with Haven Club and Resorts, where every moment is tailored for
 	  popup.querySelectorAll('.close').forEach(function (btn) {
 		btn.addEventListener('click', function () {
 		  popup.style.display = 'none';
+		  localStorag.clear();
 		});
 	  });
 
