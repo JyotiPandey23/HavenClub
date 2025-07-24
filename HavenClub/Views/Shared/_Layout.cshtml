@@ -137,7 +137,7 @@ fbq('track', 'PageView');
      </div>
    </div> *@
 	<!-- HTML Structure -->
-	<div class="bookMembershipPopup">
+	@* <div class="bookMembershipPopup">
 		<div class="bookMembershipPopupInner">
 			<button class="close">×</button>
 			<div class="bookMembershipForm">
@@ -176,7 +176,7 @@ fbq('track', 'PageView');
 				</form>
 			</div>
 		</div>
-	</div>
+	</div> *@
 
 <div class="top_header">
   <div class="container_large">
@@ -424,13 +424,14 @@ Escape to luxury with Haven Club and Resorts, where every moment is tailored for
 	  popup.querySelectorAll('.close').forEach(function (btn) {
 		btn.addEventListener('click', function () {
 		  popup.style.display = 'none';
-		  localStorag.clear();
+		  localStorage.clear();
 		});
 	  });
 
 	  window.addEventListener('click', function (e) {
 		if (e.target === popup) {
 		  popup.style.display = 'none';
+	localStorage.clear();
 		}
 	  });
 	});
