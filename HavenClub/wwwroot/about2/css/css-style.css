@@ -3016,10 +3016,10 @@ button:focus, button:active {
   background-color: #fff;
 }
 
-.card-1:hover .card-1-overlay {
+/*.card-1:hover .card-1-overlay {
   -webkit-filter: blur(2px);
   filter: blur(2px);
-}
+}*/
 
 .card-1:hover .card-1-info h3 a {
   color: #3FD0D4;
