@@ -1,4 +1,6 @@
 using System.Diagnostics;
+using System.Net.Mail;
+using System.Net;
 using HavenClub.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -75,6 +77,44 @@ namespace HavenClub.Controllers
         public IActionResult MemberLogin()
         {
             return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> ContactUs(ContactUsModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            try
+            {
+                var smtpClient = new SmtpClient("smtp.gmail.com")
+                {
+                    Port = 587,
+                    Credentials = new NetworkCredential("chandangkp2002@gmail.com", "ggso lfey maro nyoh"),
+                    EnableSsl = true,
+                };
+
+                var mailMessage = new MailMessage
+                {
+                    From = new MailAddress("chandan.in63@gmail.com"),
+                    Subject = model.Subject,
+                    Body = $"<h3>New Contact Request</h3><p><strong>Name:</strong> {model.Name}</p><p><strong>Email:</strong> {model.Email}</p><p><strong>Phone:</strong> {model.Phone}</p><p><strong>Message:</strong> {model.Message}</p>",
+                    IsBodyHtml = true,
+                };
+
+                mailMessage.To.Add("Info@havenclubandresorts.in");
+
+                await smtpClient.SendMailAsync(mailMessage);
+
+                TempData["SuccessMessage"] = "Your message has been sent successfully!";
+                return RedirectToAction("ContactUs");
+            }
+            catch
+            {
+                TempData["ErrorMessage"] = "There was an error sending your message. Please try again later.";
+                return View(model);
+            }
         }
     }
 }

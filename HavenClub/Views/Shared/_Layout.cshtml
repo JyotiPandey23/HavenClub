@@ -435,4 +435,19 @@ fbq('track', 'PageView');
 		}
 	  });
 	});
+
+	  document.addEventListener("DOMContentLoaded", function () {
+	  const alert = document.querySelector('.alert-dismissible');
+	  if (alert) {
+		// Auto hide after 3 seconds (3000ms)
+		setTimeout(() => {
+		  // Use Bootstrap's fade out by removing "show" then disposing
+		  alert.classList.remove('show');
+		  // After transition (~150ms) remove from DOM to avoid space
+		  setTimeout(() => {
+			if (alert.parentNode) alert.parentNode.removeChild(alert);
+		  }, 200);
+		}, 5000);
+	  }
+	});
 </script>
