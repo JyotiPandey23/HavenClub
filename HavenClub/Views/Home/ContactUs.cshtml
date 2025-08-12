@@ -8,73 +8,74 @@
 }
 
 
+@model HavenClub.Models.ContactUsModel
 
-	<!-- Dark mode -->
-	<script>
-		// const storedTheme = localStorage.getItem('theme')
+@{
+	ViewData["Title"] = "Contact Us";
+}
 
-		// const getPreferredTheme = () => {
-		// 	if (storedTheme) {
-		// 		return storedTheme
-		// 	}
-		// 	return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-		// }
+<!-- Dark mode -->
+<script>
+	// const storedTheme = localStorage.getItem('theme')
 
-		// const setTheme = function (theme) {
-		// 	if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-		// 		document.documentElement.setAttribute('data-bs-theme', 'dark')
-		// 	} else {
-		// 		document.documentElement.setAttribute('data-bs-theme', theme)
-		// 	}
-		// }
+	// const getPreferredTheme = () => {
+	// 	if (storedTheme) {
+	// 		return storedTheme
+	// 	}
+	// 	return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+	// }
 
-		// setTheme(getPreferredTheme())
+	// const setTheme = function (theme) {
+	// 	if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+	// 		document.documentElement.setAttribute('data-bs-theme', 'dark')
+	// 	} else {
+	// 		document.documentElement.setAttribute('data-bs-theme', theme)
+	// 	}
+	// }
 
-		// window.addEventListener('DOMContentLoaded', () => {
-		// 	var el = document.querySelector('.theme-icon-active');
-		// 	if(el != 'undefined' && el != null) {
-		// 		const showActiveTheme = theme => {
-		// 		const activeThemeIcon = document.querySelector('.theme-icon-active use')
-		// 		const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
-		// 		const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
+	// setTheme(getPreferredTheme())
 
-		// 		document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
-		// 			element.classList.remove('active')
-		// 		})
+	// window.addEventListener('DOMContentLoaded', () => {
+	// 	var el = document.querySelector('.theme-icon-active');
+	// 	if(el != 'undefined' && el != null) {
+	// 		const showActiveTheme = theme => {
+	// 		const activeThemeIcon = document.querySelector('.theme-icon-active use')
+	// 		const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+	// 		const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
 
-		// 		btnToActive.classList.add('active')
-		// 		activeThemeIcon.setAttribute('href', svgOfActiveBtn)
-		// 	}
+	// 		document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+	// 			element.classList.remove('active')
+	// 		})
 
-		// 	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-		// 		if (storedTheme !== 'light' || storedTheme !== 'dark') {
-		// 			setTheme(getPreferredTheme())
-		// 		}
-		// 	})
+	// 		btnToActive.classList.add('active')
+	// 		activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+	// 	}
 
-		// 	showActiveTheme(getPreferredTheme())
+	// 	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+	// 		if (storedTheme !== 'light' || storedTheme !== 'dark') {
+	// 			setTheme(getPreferredTheme())
+	// 		}
+	// 	})
 
-		// 	document.querySelectorAll('[data-bs-theme-value]')
-		// 		.forEach(toggle => {
-		// 			toggle.addEventListener('click', () => {
-		// 				const theme = toggle.getAttribute('data-bs-theme-value')
-		// 				localStorage.setItem('theme', theme)
-		// 				setTheme(theme)
-		// 				showActiveTheme(theme)
-		// 			})
-		// 		})
+	// 	showActiveTheme(getPreferredTheme())
 
-		// 	}
-		// })
+	// 	document.querySelectorAll('[data-bs-theme-value]')
+	// 		.forEach(toggle => {
+	// 			toggle.addEventListener('click', () => {
+	// 				const theme = toggle.getAttribute('data-bs-theme-value')
+	// 				localStorage.setItem('theme', theme)
+	// 				setTheme(theme)
+	// 				showActiveTheme(theme)
+	// 			})
+	// 		})
 
-	</script>
+	// 	}
+	// })
 
-	<!-- Favicon -->
-	
+</script>
 
-
-
-	<!-- Header START -->
+<!-- Favicon -->
+<!-- Header START -->
 
 <main>
 	<section class="pageBanner">
@@ -109,7 +110,7 @@
 						<!-- Buttons -->
 						<div class="d-grid gap-3 d-sm-block">
 							<button class="btn btn-sm btn-primary-soft"><i class="bi bi-phone me-2"></i>+18002122750</button>
-							
+
 						</div>
 					</div>
 				</div>
@@ -147,7 +148,7 @@
 						<ul class="list-inline mb-0">
 							<li class="list-inline-item"> <a class="btn btn-sm bg-facebook px-2 mb-0" href="https://www.facebook.com/share/15wTrx71ah/"><i class="fab fa-fw fa-facebook-f"></i></a> </li>
 							<li class="list-inline-item"> <a class="btn btn-sm bg-instagram px-2 mb-0" href="https://www.instagram.com/havenclubandresorts?igsh=dXp5M2tzamQwaDBl"><i class="fab fa-fw fa-instagram"></i></a> </li>
-						
+
 						</ul>
 					</div>
 				</div>
@@ -155,8 +156,8 @@
 			</div>
 		</div>
 	</section>
-		<!-- =======================
-		Main banner START -->
+	<!-- =======================
+	Main banner START -->
 
 
 
@@ -223,43 +224,68 @@
 						<div class="card-header bg-light p-0 pb-3">
 							<h3 class="mb-0">Send us message</h3>
 						</div>
+						@if (TempData["SuccessMessage"] != null)
+						{
+							<div class="alert alert-success alert-dismissible fade show position-relative" role="alert" id="flashMessage">
+								@TempData["SuccessMessage"]
+								<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+							</div>
+						}
+						@if (TempData["ErrorMessage"] != null)
+						{
+							<div class="alert alert-danger alert-dismissible fade show position-relative" role="alert" id="flashMessage">
+								@TempData["ErrorMessage"]
+								<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+							</div>
+						}
 
 						<!-- Card body START -->
 						<div class="card-body p-0">
-							<form class="row g-4">
-								<!-- Name -->
+							<form asp-action="ContactUs" method="post" class="row g-4">
+								@Html.AntiForgeryToken()
+
 								<div class="col-md-6">
 									<label class="form-label">Your name *</label>
-									<input type="text" class="form-control">
+									<input asp-for="Name" class="form-control" required />
+									<span asp-validation-for="Name" class="text-danger"></span>
 								</div>
-								<!-- Email -->
+
 								<div class="col-md-6">
 									<label class="form-label">Email address *</label>
-									<input type="email" class="form-control">
+									<input asp-for="Email" type="email" class="form-control" required />
+									<span asp-validation-for="Email" class="text-danger"></span>
 								</div>
-								<!-- Mobile number -->
+
 								<div class="col-12">
 									<label class="form-label">Mobile number *</label>
-									<input type="text" class="form-control">
+									<input asp-for="Phone" class="form-control" required />
+									<span asp-validation-for="Phone" class="text-danger"></span>
 								</div>
-								<!-- Message -->
+								<div class="col-md-6">
+									<label class="form-label">Subject *</label>
+									<input asp-for="Subject" class="form-control" required />
+									<span asp-validation-for="Subject" class="text-danger"></span>
+								</div>
 								<div class="col-12">
 									<label class="form-label">Message *</label>
-									<textarea class="form-control" rows="3"></textarea>
+									<textarea asp-for="Message" class="form-control" rows="3" required></textarea>
+									<span asp-validation-for="Message" class="text-danger"></span>
 								</div>
-								<!-- Checkbox -->
+
 								<div class="col-12 form-check ms-2">
-									<input type="checkbox" class="form-check-input" id="exampleCheck1">
-									<label class="form-check-label" for="exampleCheck1">
+									<input type="checkbox" class="form-check-input" id="termsCheck" required />
+									<label class="form-check-label" for="termsCheck">
 										By submitting this form you agree to our terms and conditions.
 									</label>
 								</div>
-								<!-- Button -->
+
 								<div class="col-12">
-									<button class="btn btn-dark mb-0" type="button">Send Message</button>
+									<button type="submit" class="btn btn-dark mb-0">Send Message</button>
 								</div>
 							</form>
 						</div>
+
+
 						<!-- Card body END -->
 					</div>
 				</div>
@@ -279,21 +305,25 @@
 	</section>
 
 
-	
-	</main>
-	<!-- **************** MAIN CONTENT END **************** -->
-	<!-- =======================
-	Footer START -->
-	
-	<!-- =======================
-	Footer END -->
-	<!-- Back to top -->
-	<div class="back-top"></div>
 
-	<!-- Bootstrap JS -->
-	<script src="~/conatct/js/WWDqFsUDkSuO.js"></script>
+</main>
+<!-- **************** MAIN CONTENT END **************** -->
+<!-- =======================
+Footer START -->
+<!-- =======================
+Footer END -->
+<!-- Back to top -->
+<div class="back-top"></div>
 
-	<!-- ThemeFunctions -->
+<!-- Bootstrap JS -->
+<script src="~/conatct/js/WWDqFsUDkSuO.js"></script>
+
+<!-- ThemeFunctions -->
 <script src="~/conatct/js/HKaUtuCEeQON.js"></script>
 
 
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+						}
