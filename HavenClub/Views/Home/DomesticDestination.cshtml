@@ -39,12 +39,23 @@
             <div id="filtered_data">
                 <div class="destinationListOuter" id="destinationListOuter">
                 </div>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination" id="paginationControls">
+                        <li class="page-item disabled" id="prevPage">
+                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        </li>
+                        <!-- Page numbers will be inserted here by JavaScript -->
+                        <li class="page-item" id="nextPage">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+
+
                 <div class="pagination">
-                    <button id="prev">Previous</button>
-                    <div class="page-numbers" id="pages">
-                        <!-- Page numbers will be dynamically inserted here -->
-                    </div>
-                    <button id="next">Next</button>
+                    <button id="prevBtn" onclick="changePage(-1)">Previous</button>
+                    <span id="pageInfo"></span>
+                    <button id="nextBtn" onclick="changePage(1)">Next</button>
                 </div>
             </div>
 
@@ -1022,22 +1033,22 @@
     <script>
         // Array of city objects with names and image URLs
         const cities = [
-            { name: "Bhopal", image: "https://images.unsplash.com/photo-1584043760783-561c60c88e7c?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0" },
-            { name: "Delhi", image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0" },
-            { name: "Mumbai", image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0" },
-            { name: "Kolkata", image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0" },
-            { name: "Chennai", image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0" },
-            { name: "Bangalore", image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0" },
-            { name: "Hyderabad", image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0" },
-            { name: "Ahmedabad", image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0" },
-            { name: "Pune", image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0" },
-            { name: "Jaipur", image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0" },
-            { name: "Surat", image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0" },
-            { name: "Lucknow", image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0" },
-            { name: "Kanpur", image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0" },
-            { name: "Nagpur", image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0" },
-            { name: "Visakhapatnam", image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0" },
-            { name: "Indore", image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0" },
+            { name: "Bhopal", image: "https://images.unsplash.com/photo-1608213189166-b099855aee3c?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+            { name: "Delhi", image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+            { name: "Mumbai", image: "https://images.unsplash.com/photo-1562979314-bee7453e911c?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+            { name: "Kolkata", image: "https://images.unsplash.com/photo-1496372412473-e8548ffd82bc?q=80&w=1314&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+            { name: "Chennai", image: "https://images.unsplash.com/photo-1563715493579-e0b3e0493b60?q=80&w=861&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+            { name: "Bangalore", image: "https://plus.unsplash.com/premium_photo-1697729434815-40ab4970ebc1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+            { name: "Hyderabad", image: "https://images.unsplash.com/photo-1551161242-b5af797b7233?q=80&w=1151&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+            { name: "Ahmedabad", image: "https://images.unsplash.com/photo-1700170554599-50c74065ecdd?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+            { name: "Pune", image: "https://images.unsplash.com/photo-1618805714320-f8825019c1be?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+            { name: "Jaipur", image: "https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+            { name: "Surat", image: "https://images.unsplash.com/photo-1625309242986-aec6b5fd1cca?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+            { name: "Lucknow", image: "https://images.unsplash.com/photo-1628477160043-3f6b3ad54f61?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+            { name: "Kanpur", image: "https://images.unsplash.com/photo-1706440512280-3c33388d5f90?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+            { name: "Nagpur", image: "https://plus.unsplash.com/premium_photo-1694475439235-0a0306a7477b?q=80&w=1194&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+            { name: "Visakhapatnam", image: "https://plus.unsplash.com/premium_photo-1694475205503-d6c6a71f03bc?q=80&w=1201&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+            { name: "Indore", image: "https://images.unsplash.com/photo-1659951345409-b517e77edbc9?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
             { name: "Thane", image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0" },
             { name: "Coimbatore", image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0" },
             { name: "Patna", image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0" },
